@@ -1,0 +1,92 @@
+#NavBar{      
+    padding: 0 10px;
+    background-color: black;
+    color: white;
+    font-family: Oswald;
+    font-size: 18px;
+    z-index: 3;
+}
+
+#navBrand{
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px 10px 10px;
+}
+
+#navContent{    
+    float: right;
+    display: flex;   
+}
+
+#navBrand img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;   
+}
+
+.navMenuHead{
+    display: block;
+    cursor: pointer;
+    padding: 5px 10px 10px 10px;
+}
+
+.navMenuHead:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.navDropMenu{
+    display: none;
+    z-index: 100;
+    min-width: 110px;  
+    right: -5px;
+    top: 40px;
+    font-size: 16px;    
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: black;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.navDropMenu li{
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navDropMenu li:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.posRelative:hover .navDropMenu{
+    display: block;
+}
+
+#infoBar{
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    color: white;
+    padding: 10px;
+    padding-left: 10px;    
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-top: none;     
+    transform: translateY(-50px);
+    animation: infoBar 0.5s ease forwards;
+    z-index: 1;
+}
+
+@keyframes infoBar{
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (min-width: 760px) {
+    #navTopic{
+        display: none;        
+    }    
+}

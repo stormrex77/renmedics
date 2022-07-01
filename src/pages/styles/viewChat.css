@@ -1,0 +1,33 @@
+#viewChat{
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.5), rgba(3, 2, 1, 0.5));
+}
+
+#chat_template{ 
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 5px;
+    color: white;   
+}
+
+#chat_template:hover{
+    background-color: rgba(253, 254, 255, 0.3);
+}
+
+#chat_template p{
+    width: calc(100% - 30px);
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;    
+}
+
+#chat_template_unread{
+    width: 25px;
+    height: 25px;    
+    border-radius: 25px;
+    text-align: center;
+    background-color: red;    
+}
+
+#chat_template_head{    
+    justify-Content: space-between;
+}

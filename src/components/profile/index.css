@@ -1,0 +1,55 @@
+#profile{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.cardHold{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 29vw;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.card{    
+    width: 150px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.card:hover{
+    opacity: 0.8;
+}
+
+.card p{
+    color: white;
+    font-weight: bold;    
+}
+
+.cardIcon{
+    width: 100px;
+    height: 100px;
+    padding: 10px;    
+    border: 2px solid white;
+    border-radius: 50px;    
+}
+
+@media screen and (min-width: 680px) {
+    .cardHold{
+        width: 29vw;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    .cardHold{
+        width: 23vw;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .cardHold{
+        width: 18vw;
+    }
+}

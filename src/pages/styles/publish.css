@@ -1,0 +1,40 @@
+#publishLeft{
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 60;
+    width: 70%;
+    padding: 10px;
+    height: 93vh;    
+}
+
+#publishTitle{
+    font-weight: bold;
+    margin: 10px;
+    max-width: 90%;    
+    overflow-wrap: break-word;
+}
+
+#imgPublish img{
+    width: 150px;
+    height: 130px;
+}
+
+#fileInputDiv{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    width: 130px;
+}
+
+#fileInputDiv input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#btn_publish{
+    margin-top: 10px;
+    width: 100%;
+}

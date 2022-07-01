@@ -1,0 +1,119 @@
+#article img{ 
+    width: 100%;
+    max-height: 90vw;
+}
+
+#articlesPage{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+}
+
+#articlesPage h3{
+    color:blue;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#postWrapper{    
+    width: 100%;
+    font-size: 20px;
+    text-align: justify;    
+}
+
+#left_article{
+    margin: 5px;    
+    max-width: 97%;
+}
+
+#left_article h2{
+    font-family: Oswald;
+    font-weight: bold;
+    padding: 2px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+#right_article{    
+    width: 97%;
+    margin: 5px;    
+}
+
+#addComments{    
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#addComments_reply{
+    display: none; 
+    width: calc(100% - 110px);
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+}
+
+#addComments_txt{
+    display: inline-block;
+    width: calc(100% - 110px);
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+#addComments_btn{
+    display: inline-block;
+    margin-top: -25px;
+    margin-left: 10px;
+    width: 80px;
+}
+
+@media screen and (min-width: 700px) {
+    #articlesPage{
+        margin-bottom: 0;
+        flex-wrap: nowrap;
+    }
+    #left_article{    
+        max-width: 440px;
+    }    
+    #right_article{
+        width: calc(100vw - 470px);  
+    }
+    #article img{
+        width: 100%;
+        max-height: 350px;
+    }
+    #left_article, #right_article{
+        height: calc(100vh - 110px);
+        overflow-y: auto;
+    }    
+}
+
+@media screen and (min-width: 800px) {    
+    #left_article{        
+        max-width: 540px;
+    }
+    #right_article{
+        width: calc(100vw - 570px);
+    }
+    #article img{
+        width: 100%;
+        max-height: 450px;
+    }
+}
+
+@media screen and (min-width: 900px) {    
+    #left_article{        
+        max-width: 640px;
+    }
+    #right_article{
+        width: calc(100vw - 670px);
+    }
+    #article img{
+        width: 100%;
+        max-height: 550px;
+    }
+}

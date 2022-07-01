@@ -1,0 +1,45 @@
+#Home{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;    
+    overflow-y: auto;
+}
+
+.homeArticles, .publishArticles{
+    width: 95%;    
+    margin: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+.homeArticles img, .publishArticles img{
+    width: 100px;
+    height: 110px;
+    margin: 2px;
+}
+
+.articleContent{    
+    margin-left: 5px;
+    height: 110px;
+    overflow-y: hidden;        
+}
+
+.articleContent h4{
+    font-family: Oswald;    
+    max-height: 55px;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+}
+
+.articleContent p{
+    overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 780px) {
+    #articleWrapper{
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+    }    
+}
