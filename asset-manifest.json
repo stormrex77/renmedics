@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/renmedics/static/css/main.4730cbc8.css",
+    "main.js": "/renmedics/static/js/main.a85bdf43.js",
+    "static/js/787.8c30a853.chunk.js": "/renmedics/static/js/787.8c30a853.chunk.js",
+    "static/media/Oswald-VariableFont_wght.ttf": "/renmedics/static/media/Oswald-VariableFont_wght.ee815f542584c61b67c2.ttf",
+    "static/media/Dosis-VariableFont_wght.ttf": "/renmedics/static/media/Dosis-VariableFont_wght.f4fe0ac26c24e981d2c7.ttf",
+    "static/media/logo.jpg": "/renmedics/static/media/logo.2800b376db290f1636bd.jpg",
+    "index.html": "/renmedics/index.html",
+    "main.4730cbc8.css.map": "/renmedics/static/css/main.4730cbc8.css.map",
+    "main.a85bdf43.js.map": "/renmedics/static/js/main.a85bdf43.js.map",
+    "787.8c30a853.chunk.js.map": "/renmedics/static/js/787.8c30a853.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4730cbc8.css",
+    "static/js/main.a85bdf43.js"
+  ]
+}
