@@ -22,7 +22,15 @@ export const withRouter = (Component) => {
 
 export const api = createApi({
     reducerPath: 'api',
-    baseQuery: fetchBaseQuery({baseUrl: hostPath}),
+    baseQuery: fetchBaseQuery({baseUrl: hostPath,
+        prepareHeaders: (headers, {getState}) => {
+            const token = getState().auth.token
+            if (token){
+                headers.set('authorization', `Bearer ${token}`)
+            }
+            return headers;
+        },
+    }),
     tagTypes: ['Post', 'User', 'Reaction', 'Ip', 'Chats'],
     endpoints: builder => ({
         refetch: builder.mutation({

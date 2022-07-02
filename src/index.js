@@ -10,15 +10,18 @@ import {GoogleOAuthProvider} from '@react-oauth/google';
 
 import { Provider } from "react-redux";
 import store from './components/store';
+/*
+<GoogleOAuthProvider clientId='328488836448-kt7892ah27774oievjl9nihvu9oobic9.apps.googleusercontent.com'>
+      
+      </GoogleOAuthProvider>
+*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter>    
     <Provider store={store}>
-      <GoogleOAuthProvider clientId='328488836448-kt7892ah27774oievjl9nihvu9oobic9.apps.googleusercontent.com'>
-      <App />
-      </GoogleOAuthProvider>
+      <App />      
     </Provider>
     </HashRouter>
   </React.StrictMode>
