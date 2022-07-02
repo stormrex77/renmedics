@@ -19,10 +19,12 @@ import store from './components/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>    
-    <Provider store={store}>
-      <App />      
-    </Provider>
+    <HashRouter>
+      <GoogleOAuthProvider clientId='328488836448-kn201a2ln0h6uadl87kpshfbeomeemr1.apps.googleusercontent.com'>
+      <Provider store={store}>
+        <App />      
+      </Provider>
+      </GoogleOAuthProvider>    
     </HashRouter>
   </React.StrictMode>
 );
