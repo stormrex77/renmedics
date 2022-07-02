@@ -2,7 +2,7 @@ import React from 'react';
 import {FaEdit} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useGetChatQuery } from '../features/api';
-import {googleLogout} from '@react-oauth/google';
+//import {googleLogout} from '@react-oauth/google';
 import './index.css';
 
 const Admin = () => {
@@ -25,7 +25,7 @@ const Admin = () => {
 
     function logOut(){
         sessionStorage.clear();
-        googleLogout();
+        //googleLogout();
     }
 
     return(

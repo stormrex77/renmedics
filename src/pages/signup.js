@@ -268,12 +268,7 @@ return (
                         </ul>
                     </form>
                 </div>                
-                <div className="social-login">
-                <GoogleLogin
-                    onSuccess={(data) => handleGoogleLogin(data.credential, this)}
-                    onError={() => {console.log('error')}}
-                    useOneTap
-                />
+                <div className="social-login">                
                 </div>
             </section>
         </div>

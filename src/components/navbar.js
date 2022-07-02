@@ -5,7 +5,7 @@ import './navbar.css';
 import RenderPosts from './api/render_posts';
 import { useGetChatQuery, useGetCommentsQuery, useGetUserQuery, useRefetchMutation, useResetChatMutation } from './features/api';
 import ShowSpinner from './spinner';
-import {googleLogout} from '@react-oauth/google';
+//import {googleLogout} from '@react-oauth/google';
 
 const NavBar = () => {
     const [states, setStates] = useState({topicDisplay: false, type: '', oldDate: 0});    
@@ -22,7 +22,7 @@ const NavBar = () => {
     function logOut(){
         if (logged === true){            
             sessionStorage.clear();
-            googleLogout();
+            //googleLogout();
         }        
     }
 

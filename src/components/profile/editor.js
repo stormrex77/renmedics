@@ -1,13 +1,13 @@
 import React, {  } from 'react';
 import {FaEdit} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import {googleLogout} from '@react-oauth/google';
+//import {googleLogout} from '@react-oauth/google';
 import './index.css';
 
 const RenmeEditor = () => {
     function logOut(){
         sessionStorage.clear();
-        googleLogout();
+        //googleLogout();
     }  
 
     return(
