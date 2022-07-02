@@ -6,8 +6,8 @@ let hostname = window.location.hostname;
 let hostPath = "http://" + hostname + "/renmedata";
 
 export function getUrl(target){
-    return hostPath + target;
-    //return "https://gzekodata.herokuapp.com/" + target;
+    //return hostPath + target;
+    return "https://renmedata.herokuapp.com" + target;
 }
 
 export const withRouter = (Component) => {
