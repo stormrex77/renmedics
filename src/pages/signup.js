@@ -283,7 +283,6 @@ return (
 }
 }
 
-
 async function addUser(e, data, dis){
     e.preventDefault();
     disable('Uploading data...');
@@ -301,7 +300,8 @@ async function addUser(e, data, dis){
         return;
     }
     try{
-        const res = await dis.props.dispatch(api.endpoints.addUser.initiate(data)).unwrap();        
+        const res = await dis.props.dispatch(api.endpoints.addUser.initiate(data)).unwrap();
+        console.log(res);
         if (res){
             switch (res.message){
                 case "success":
