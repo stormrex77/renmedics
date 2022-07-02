@@ -93,6 +93,14 @@ export const api = createApi({
             }),
             invalidatesTags: ['User']
         }),
+        addUser: builder.mutation({
+            query: (post) => ({
+                url: '/add_user.php',
+                method: 'POST',
+                body: post
+            }),
+            invalidatesTags: ['User']
+        }),
         getLikes: builder.query({
             query: (id) => `/get_likes.php?id=${id}`,
             providesTags: ['Reaction']
@@ -153,7 +161,7 @@ export const {
     useRefetchMutation, useResetChatMutation,
     useGetPostQuery, useGetPostsQuery, useAddCommentMutation, useGetCommentsQuery, useUpdatePostMutation,
     useDeletePostMutation, useUploadImageMutation, useGetIpQuery, useGetUserQuery, useUpdateUserMutation,
-    useGetLikesQuery, useAddLikesMutation, useGetSeenQuery, useAddSeenMutation, useGetChatQuery, useAddChatMutation,
-    useUpdateChatMutation
+    useAddUserMutation, useGetLikesQuery, useAddLikesMutation, useGetSeenQuery, useAddSeenMutation, useGetChatQuery,
+    useAddChatMutation, useUpdateChatMutation
 } = api;
 

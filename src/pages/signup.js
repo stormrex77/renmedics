@@ -3,12 +3,13 @@ import { FaFacebook, FaGooglePlus, FaLock, FaUser, FaRegAddressBook, FaEnvelope,
     FaCheckCircle } from 'react-icons/fa';
 import NavBar from '../components/navbar';
 import './styles/account.css';
-import { getUrl, withRouter } from '../components/features/api';
+import { api, getUrl, withRouter } from '../components/features/api';
 import { setInfoBar, enable, disable, isEmpty, handleGoogleLogin } from '../components';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
 import {GoogleLogin} from '@react-oauth/google';
+import { connect } from 'react-redux';
 
 class SignUp extends Component{
     constructor() {
@@ -283,7 +284,7 @@ return (
 }
 
 
-function addUser(e, data, dis){
+async function addUser(e, data, dis){
     e.preventDefault();
     disable('Uploading data...');
     if (!checkValid(
@@ -298,28 +299,30 @@ function addUser(e, data, dis){
     )){
         enable();
         return;
-    }    
-    let apiPath = getUrl("/add_user.php");
-    axios.post(apiPath, data)
-    .then(res => {        
-        switch (res.data.message){
-            case "success":
-                setInfoBar("bg-success","Registration Successful!");
-                let path = `/validate/p_${data.id}`;
-                dis.props.navigate(path);
-            break;
-            case "exist":
-                setInfoBar("bg-danger","Email already registered!");
-            break;
-            default:
-                setInfoBar("bg-danger","An Error Occured!");
-            break;            
+    }
+    try{
+        const res = await dis.props.dispatch(api.endpoints.addUser.initiate(data)).unwrap();        
+        if (res){
+            switch (res.message){
+                case "success":
+                    setInfoBar("bg-success","Registration Successful!");
+                    let path = `/validate/p_${data.id}`;
+                    dis.props.navigate(path);
+                break;
+                case "exist":
+                    setInfoBar("bg-danger","Email already registered!");
+                break;
+                default:
+                    setInfoBar("bg-danger","An Error Occured!");
+                break;            
+            }
+            enable();
         }
-        enable();
-    })
-    .catch(error => this.setState({
-        error: error.message
-    }));
+        enable();    
+    }catch(err){
+        console.log(err)
+        enable();        
+    }    
 }
 
 function checkValid(fName, uName, email, phone, password, rePassword, checked, dis) {
@@ -362,4 +365,4 @@ function checkValid(fName, uName, email, phone, password, rePassword, checked, d
     }
     return true;
 }
-export default withRouter(SignUp);
+export default withRouter(connect()(SignUp));
