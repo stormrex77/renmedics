@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 let hostname = window.location.hostname;
-let hostPath = "http://" + hostname + "/renmedata";
+//let hostPath = "http://" + hostname + "/renmedata";
+let hostPath = "https://renmedata.herokuapp.com";
 
 export function getUrl(target){
-    //return hostPath + target;
-    return "https://renmedata.herokuapp.com" + target;
+    return hostPath + target;    
 }
 
 export const withRouter = (Component) => {
